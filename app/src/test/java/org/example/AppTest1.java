@@ -7,8 +7,9 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class AppTest1 {
-    @Test public void appHasAGreeting() {
-        App classUnderTest = new App();
-        assertNotNull("app should have a greeting", classUnderTest.getGreeting());
+
+    @Test
+    public void thisTestWillFail() {
+        assertEquals("Expected true but got false", true, false); 
     }
 }
