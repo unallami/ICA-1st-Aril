@@ -59,11 +59,9 @@ jobs:
       
     - name: Run appropriate tests based on branch
       run: |
-        if [ "${{ github.ref_name }}" = "master" ]; then
-          echo "Running all tests (on master branch)"
+        if [ "${{ github.ref_name }}" = "master" ]; 
           ./gradlew test
         else
-          echo "Running only AppTest (on non-master branch)"
           ./gradlew test --tests "org.example.AppTest1"
         fi
 
